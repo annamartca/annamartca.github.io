@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
+      <link rel="stylesheet" href="./css/lab.css">
+      <link rel="stylesheet" href="./css/markdown.css">
+     
+      <link rel="icon" href="favicon.png" sizes="16x16">
+      <title>Lunderg Lab</title>
+ 
+
+
+      <script src="./js/jquery-3.3.1.min.js"></script>
+      <script src="./js/bootstrap.bundle.min.js"></script>
+      <script src="./js/showdown.min.js"></script>
+      <script src="./js/lab.js"></script>
+
+      <script>
+         $( document ).ready(function() {
+            convertContent();
+            $.get("menu.html", function(response) {
+               $("#menu").html(response);
+               $("#Facilities").addClass( "active" );
+            });
+            $("#footer").load("footer.html");
+         });
+      </script>
+   </head>
+
+   <body>
+      <div id="menu"></div>
+
+      <header>
+         <div class="adapt-fixed-top">
+            <img class="middle-image" src="./images/facilities.png">
+         </div>
+      </header>
+
+      <div class="container">
+         <h1 class="title">Facilities</h1>
+      </div>
+
+
+      <!-- beginning of the content of this page -->
+      <div class="container main-paragraph mdcontent facilities1"></div>
+
+      <div class="container">
+
+         <div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="card">
+               <div class="card-header" role="tab" id="headingOne">
+                  <h5 class="mb-0">
+                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:#696969">
+                        <span style="color:#696969">Services</span>
+                     </a>
+                  </h5>
+               </div>
+
+               <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="card-body">                   
+                     <div class="container main-paragraph mdcontent facilities2"></div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="card-header" role="tab" id="headingTwo">
+                  <h5 class="mb-0">
+                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-	  controls="collapseTwo" style="color:#696969">
+                        <span style="color:#696969">Applications</span>
+                     </a> 
+                  </h5>
+               </div>
+
+               <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="card-body">
+                     <div class="container main-paragraph mdcontent facilities3"></div>
+                  </div>
+               </div>
+            </div>        
+         </div> 
+      </div> 
+      <!-- end of the content of this page -->
+
+
+      <div id="footer"></div>
+   </body>
+</html>
+
+
+

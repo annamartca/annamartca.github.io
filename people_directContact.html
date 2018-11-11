@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
+      <link rel="stylesheet" href="./css/lab.css">
+      <link rel="stylesheet" href="./css/markdown.css">
+     
+      <link rel="icon" href="favicon.png" sizes="16x16">
+      <title>Lunderg Lab</title>
+ 
+
+
+      <script src="./js/jquery-3.3.1.min.js"></script>
+      <script src="./js/bootstrap.bundle.min.js"></script>
+      <script src="./js/showdown.min.js"></script>
+      <script src="./js/lab.js"></script>
+
+      <script>
+         $( document ).ready(function() {
+            convertContent();
+            $.get("menu.html", function(response) {
+               $("#menu").html(response);
+               $("#People").addClass( "active" );
+            });
+            $("#footer").load("footer.html");
+         });
+      </script>
+   </head>
+
+   <body>
+      <div id="menu"></div>
+
+      <header>
+         <div class="adapt-fixed-top">
+            <img class="middle-image" src="./images/people.png">
+         </div>
+      </header>
+
+      <div class="container">
+         <h1 class="title">Direct contact</h1>
+      </div>
+
+
+      <!-- beginning of the content of this page -->
+      <div class="container">
+
+         <!-- base person info -->
+         <div class="row">
+            <div class="col-md-3">
+               <img class="img-fluid rounded mb-3 mb-md-0" src="./images/people_emlu.png" alt="">
+            </div>
+            <div class="col-md-9 mdcontent people_emlu"></div>
+         </div>
+         <hr>
+         <!-- end base person info -->
+
+         <!-- base person info -->
+         <div class="row">
+            <div class="col-md-3">
+               <img class="img-fluid rounded mb-3 mb-md-0" src="./images/people_anma.png" alt="">
+            </div>
+            <div class="col-md-9 mdcontent people_anma"></div>
+         </div>
+         <!-- end base person info -->
+
+      </div>
+      <!-- end of the content of this page -->
+
+
+      <div id="footer"></div>
+   </body>
+</html>
+
+
+

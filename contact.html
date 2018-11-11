@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
+      <link rel="stylesheet" href="./css/lab.css">
+      <link rel="stylesheet" href="./css/markdown.css">
+     
+      <link rel="icon" href="favicon.png" sizes="16x16">
+      <title>Lunderg Lab</title>
+ 
+
+
+      <script src="./js/jquery-3.3.1.min.js"></script>
+      <script src="./js/bootstrap.bundle.min.js"></script>
+      <script src="./js/showdown.min.js"></script>
+      <script src="./js/lab.js"></script>
+
+      <script>
+         $( document ).ready(function() {
+            convertContent();
+            $.get("menu.html", function(response) {
+               $("#menu").html(response);
+               $("#Contact").addClass( "active" );
+            });
+            $("#footer").load("footer.html");
+         });
+      </script>
+   </head>
+
+   <body>
+      <div id="menu"></div>
+
+      <header>
+         <div class="adapt-fixed-top">
+            <img class="middle-image" src="./images/contact.png">
+         </div>
+      </header>
+
+      <div class="container">
+         <h1 class="title">Direct contact</h1>
+      </div>
+
+
+      <!-- beginning of the content of this page -->
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8 mb-4">
+            <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Tomtebodav%C3%A4gen%2023A&t=&z=5&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        
+            <div class="col-lg-4 mb-4">
+            <h3 style="color:#696969">Emma Lundberg</h3>
+            <p>
+            Associate professor
+	    <br>Science for Life Laboratories, Alpha 2
+	    <br>Tomtebodavägen 23A
+            <br>171 65-Solna (Stockholm)
+	    <br>Sweden
+            <br>email:
+            <a href="mailto:emma.lundberg@scilifelab.se">emma.lundberg@scilifelab.se</a>
+            </p>
+            </div>
+         </div>   
+      </div>
+      <!-- end of the content of this page -->
+
+
+      <div id="footer"></div>
+   </body>
+</html>
+
+
+
